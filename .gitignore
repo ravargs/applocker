@@ -1,0 +1,44 @@
+# Gradle
+.gradle/
+build/
+app/build/
+appintro/build/
+hidden-api/build/
+patternlock/build/
+keystore/
+# IntelliJ/Android Studio
+.idea/
+*.iml
+*.iws
+.project
+.settings/
+*.ipr
+out/
+
+# Local configuration
+local.properties
+
+# Signing
+keystore/
+*.jks
+*.keystore
+keystore_base64.txt
+
+# Log files
+*.log
+
+# Android/Device files
+captures/
+.externalNativeBuild/
+.cxx/
+*.apk
+*.ap_
+*.dex
+*.class
+
+# Kotlin
+.kotlin/
+
+# OS files
+.DS_Store
+Thumbs.db
