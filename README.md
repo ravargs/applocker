@@ -6,6 +6,9 @@
 <p align="center"><b>Open Source Android App Locker & Privacy Guard</b></p>
 
 <p align="center">
+  <a href="https://github.com/ravargs/AppLock/actions/workflows/android.yml">
+    <img src="https://github.com/ravargs/AppLock/actions/workflows/android.yml/badge.svg" alt="Android CI/CD Status">
+  </a>
   <a href="https://opensource.org/licenses/MIT">
     <img src="https://img.shields.io/badge/License-MIT-blue.svg" alt="License">
   </a>
