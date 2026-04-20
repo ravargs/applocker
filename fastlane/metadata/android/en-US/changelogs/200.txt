@@ -1,0 +1,14 @@
+* Add global kill switch
+* Add pattern password type (#57, #63, #82, #105)
+* Android 16 based pin screen
+* Add unlock until screen lock feature
+* Add support for landscape mode
+* Add auto unlock feature
+* Overhaul locking mechanism
+* Improve anti uninstall mechanism (#78)
+* Allow system apps to be locked
+* Fix items hidden under navbar (#94)
+* Improve recents detection
+* Add error handling to safely catch and log accessibility service crashes
+* Fix locking issues
+* Ask password for disabling anti uninstall

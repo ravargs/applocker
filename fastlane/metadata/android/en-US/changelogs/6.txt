@@ -1,0 +1,13 @@
+
+* Fix start chosen backend on boot properly
+* Fix wrong password on using after setup
+* Start services right after granting permission
+* Don't switch backend in settings until permission granted
+* Ask for missing permissions on app startup
+* Prevwnt multiple backends running simultaneously
+* Add predictive back gestures
+
+---
+
+Thank you for choosing AppLock for your privacy needs. We welcome your feedback and suggestions
+through GitHub issues!

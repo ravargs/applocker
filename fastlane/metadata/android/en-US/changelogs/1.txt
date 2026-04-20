@@ -1,0 +1,13 @@
+First Official Release of AppLock!
+
+• Complete app protection with one-tap security
+• Biometric authentication (fingerprint)
+• PIN alternative security
+• Real-time app monitoring
+• Material You design that adapts to your system theme
+• Zero data collection - all security data stays on your device
+• Works completely offline for maximum privacy
+• Intuitive onboarding with guided setup
+• Quick app selection with efficient search and sorting
+
+Thank you for choosing AppLock for your privacy needs!

@@ -1,0 +1,7 @@
+* Fix accessibility permission detection on some devices (#53)
+* Fix crash when shizuku service is not running
+* Removes setup screen that forces enabling accessibility service
+* Check for overlay permission at startup to replace the function of accessibility service
+* Remove fallback dialog and instead try every backend
+* Show toast if none of the backends are configured properly
+* Fix dismiss button not working in join community dialog

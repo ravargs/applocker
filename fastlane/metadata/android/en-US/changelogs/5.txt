@@ -1,0 +1,17 @@
+
+* Add new mode with Shizuku
+* Add method for detecting locked apps faster with UsageStats (#24, #14)
+* Start fallback services when one service fails or is not available
+* Add support for choosing fallback mode
+* Fix repeated lock screen on some keyboards (#16)
+* Exclude all system launchers from resetting lock states
+* Better recents handling to prevent lock screen issues (#3)
+* Allow resetting lock password with system credentials
+* More efficient anti uninstall mechanism (#12)
+* Lock the app as soon as its removed from screen (#25)
+* Automatically start service on device boot
+
+---
+
+Thank you for choosing AppLock for your privacy needs. We welcome your feedback and suggestions
+through GitHub issues!

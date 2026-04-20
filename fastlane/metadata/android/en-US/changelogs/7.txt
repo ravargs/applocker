@@ -1,0 +1,15 @@
+
+* Add variable length PIN support
+* Add Shizuku experimental backend
+* Add option to disable haptics
+* Add proper support for face unlock
+* Fix biometric screen not showing on some devices
+* Adopt M3 Expressive buttons
+* Fix crash checking for shizuku service
+* Start foreground services with systemExempted permission when available
+* Fix false lock screen with Shizuku backend
+* Fix lock screen loop
+* Prevent keyboard from triggering locks
+* Improve animations
+* Improve app design
+* Update libraries
