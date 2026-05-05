@@ -101,6 +101,9 @@ class AppLockRepository(private val context: Context) {
 
     fun isAutoLockNewAppsEnabled(): Boolean = preferencesRepository.isAutoLockNewAppsEnabled()
 
+    fun setAppIconHidden(hidden: Boolean) = preferencesRepository.setAppIconHidden(hidden)
+    fun isAppIconHidden(): Boolean = preferencesRepository.isAppIconHidden()
+
     fun setActiveBackend(backend: BackendImplementation) =
         backendServiceManager.setActiveBackend(backend)
 

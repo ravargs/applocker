@@ -155,6 +155,14 @@ class PreferencesRepository(context: Context) {
         return settingsPrefs.getBoolean(KEY_AUTO_LOCK_NEW_APPS, true)
     }
 
+    fun setAppIconHidden(hidden: Boolean) {
+        settingsPrefs.edit { putBoolean(KEY_APP_ICON_HIDDEN, hidden) }
+    }
+
+    fun isAppIconHidden(): Boolean {
+        return settingsPrefs.getBoolean(KEY_APP_ICON_HIDDEN, false)
+    }
+
     companion object {
         private const val PREFS_NAME_APP_LOCK = "app_lock_prefs"
         private const val PREFS_NAME_SETTINGS = "app_lock_settings"
@@ -176,6 +184,7 @@ class PreferencesRepository(context: Context) {
         private const val KEY_AUTO_UNLOCK = "auto_unlock"
         private const val KEY_SHOW_SYSTEM_APPS = "show_system_apps"
         private const val KEY_LOCK_TYPE = "lock_type"
+        private const val KEY_APP_ICON_HIDDEN = "app_icon_hidden"
 
         private const val DEFAULT_PROTECT_ENABLED = true
         private const val DEFAULT_UNLOCK_DURATION = 0

@@ -91,6 +91,7 @@ fun SettingsScreen(
     var disableHapticFeedback by remember { mutableStateOf(appLockRepository.shouldDisableHaptics()) }
     var loggingEnabled by remember { mutableStateOf(appLockRepository.isLoggingEnabled()) }
     var autoLockNewApps by remember { mutableStateOf(appLockRepository.isAutoLockNewAppsEnabled()) }
+    var appIconHidden by remember { mutableStateOf(appLockRepository.isAppIconHidden()) }
 
     var showPermissionDialog by remember { mutableStateOf(false) }
     var showDeviceAdminDialog by remember { mutableStateOf(false) }
@@ -343,6 +344,45 @@ fun SettingsScreen(
                             onCheckedChange = { isChecked ->
                                 autoLockNewApps = isChecked
                                 appLockRepository.setAutoLockNewAppsEnabled(isChecked)
+                            }
+                        ),
+                        ToggleSettingItem(
+                            icon = Icons.Default.VisibilityOff,
+                            title = stringResource(R.string.settings_screen_hide_app_title),
+                            subtitle = stringResource(R.string.settings_screen_hide_app_desc),
+                            checked = appIconHidden,
+                            enabled = true,
+                            onCheckedChange = { isChecked ->
+                                appIconHidden = isChecked
+                                appLockRepository.setAppIconHidden(isChecked)
+
+                                val pm = context.packageManager
+                                val defaultAlias = ComponentName(context, "${context.packageName}.MainActivityAliasDefault")
+                                val hiddenAlias = ComponentName(context, "${context.packageName}.MainActivityAliasHidden")
+
+                                if (isChecked) {
+                                    pm.setComponentEnabledSetting(
+                                        defaultAlias,
+                                        PackageManager.COMPONENT_ENABLED_STATE_DISABLED,
+                                        PackageManager.DONT_KILL_APP
+                                    )
+                                    pm.setComponentEnabledSetting(
+                                        hiddenAlias,
+                                        PackageManager.COMPONENT_ENABLED_STATE_ENABLED,
+                                        PackageManager.DONT_KILL_APP
+                                    )
+                                } else {
+                                    pm.setComponentEnabledSetting(
+                                        hiddenAlias,
+                                        PackageManager.COMPONENT_ENABLED_STATE_DISABLED,
+                                        PackageManager.DONT_KILL_APP
+                                    )
+                                    pm.setComponentEnabledSetting(
+                                        defaultAlias,
+                                        PackageManager.COMPONENT_ENABLED_STATE_ENABLED,
+                                        PackageManager.DONT_KILL_APP
+                                    )
+                                }
                             }
                         )
                     )

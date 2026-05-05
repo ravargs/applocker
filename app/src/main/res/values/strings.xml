@@ -288,4 +288,8 @@ Make sure you have Shizuku installed and enabled via ADB. Tap \'Next\' to grant 
 
     <string name="settings_screen_auto_lock_new_apps_title">Auto-lock New Apps</string>
     <string name="settings_screen_auto_lock_new_apps_desc">Automatically protect newly installed applications</string>
+
+    <string name="app_name_hidden">Calendar</string>
+    <string name="settings_screen_hide_app_title">Hide App Icon</string>
+    <string name="settings_screen_hide_app_desc">Change app name to Calendar and use a different icon to hide AppLock</string>
 </resources>
